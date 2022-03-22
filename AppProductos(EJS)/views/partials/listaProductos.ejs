@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="container mb-4 text-center">
+        <h4>Lista de Producto</h2>
+    </div>    
+    <div class="container d-flex justify-content-center">
+      <table class="table table-striped">
+        <thead class="bg-dark bg-gradient text-white">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if(productos.length) { %>
+            <% for(let i = 0; i < productos.length; i++) { %>
+              <tr>
+                <td class="col-md-2"><%= productos[i].id %></td>
+                <td class="col-md-2"><%= productos[i].title %></td>
+                <td class="col-md-2"><%= productos[i].price %></td>
+                <td class="col-md-2"><img style="width:15%" src=<%= productos[i].thumbnail %>></td>
+              </tr>
+            <% } %>
+          <% } else { %>
+            <tr>
+              <td colspan="5">No hay Productos</td>
+            </tr>
+            
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+</div>  

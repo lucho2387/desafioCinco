@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="container mb-4 text-center">
+        <h4>Lista de Producto</h2>
+    </div>    
+    <div class="container">
+      <table class="table table-striped">
+        <thead class="bg-dark bg-gradient text-white">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#if productos.length }} 
+            {{#each productos}}
+              <tr>
+                <td class="col-md-2">{{id}}</td>
+                <td class="col-md-2">{{title}}</td>
+                <td class="col-md-2">{{price}}</td>
+                <td class="col-md-2"><img style="width:10%" src={{thumbnail}}></td>
+              </tr>
+            {{/each}}
+          {{else}}
+            <tr>
+              <td colspan="5">No hay Productos</td>
+            </tr>
+          {{/if}}
+        </tbody>
+      </table>
+    </div>
+</div>  

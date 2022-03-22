@@ -1,0 +1,23 @@
+div(class="container mt-5")
+  div(class="container mb-4 text-center")
+    h4 Lista de Producto
+  div(class="container")
+    table(class="table table-striped")
+      thead(class="bg-dark bg-gradient text-white")
+        tr 
+          th(scope="col") ID
+          th(scope="col") Nombre
+          th(scope="col") Precio
+          th(scope="col") Imagen
+      tbody    
+         each producto in productos 
+            
+            tr  
+              td(class="col-md-2") #{producto.id}
+              td(class="col-md-2") #{producto.title}
+              td(class="col-md-2") #{producto.price}
+              td(class="col-md-2") 
+                img.producto(src=producto.thumbnail style="width:15%")
+         else 
+            tr 
+              td(colspan="5") No hay Productos        
